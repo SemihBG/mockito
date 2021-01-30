@@ -152,4 +152,8 @@ public class MockUtil {
         return mockMaker.createConstructionMock(
                 type, settingsFactory, handlerFactory, mockInitializer);
     }
+
+    public static void clear() {
+        mockMaker.clear();
+    }
 }

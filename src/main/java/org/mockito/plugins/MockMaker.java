@@ -199,6 +199,12 @@ public interface MockMaker {
     }
 
     /**
+     * Clears all cashes for mocked types and removes all byte code alterations, if possible.
+     */
+    @Incubating
+    default void clear() { }
+
+    /**
      * Carries the mockability information
      *
      * @since 2.1.0

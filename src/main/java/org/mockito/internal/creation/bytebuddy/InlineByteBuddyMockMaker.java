@@ -483,6 +483,12 @@ public class InlineByteBuddyMockMaker
     }
 
     @Override
+    public void clear() {
+        clearAllMocks();
+        bytecodeGenerator.clear();
+    }
+
+    @Override
     public void clearMock(Object mock) {
         if (mock instanceof Class<?>) {
             for (Map<Class<?>, ?> entry : mockedStatics.getBackingMap().target.values()) {
